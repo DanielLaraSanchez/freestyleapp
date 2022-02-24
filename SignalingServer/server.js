@@ -106,7 +106,7 @@ io.sockets.on('connection', function (socket) {
     console.log(activeConnections, "activeconnections on disconnect after getconnectionspairedup")
     socket.emit('bye', socket.id)
     socket.broadcast.emit('getAllPeers', clients )
-    // console.log("client" + socket.id, "has disconnected, currently there are", clients.length, "connected")
+    console.log("client" + socket.id, "has disconnected, currently there are", clients.length, "connected")
   });
 
   socket.on('imfree', (freePeerId) => {
